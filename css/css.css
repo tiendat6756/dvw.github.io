@@ -4,7 +4,8 @@
 }
 #menu_text {
 	text-align: center;
-	background-color: #dce31b;
+	background-image: url('bgr.jpg');
+	background-size: auto;
 	padding: 50px;
 }
 #img {
