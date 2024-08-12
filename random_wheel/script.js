@@ -70,7 +70,7 @@ function spinWheel() {
 
     let selectedName;
 
-    if (remainingNames.includes("Chúng em là đom đóms")) {
+    if (remainingNames.includes("M C K")) {
         selectedName = hiddenResults.shift(); // Lấy kết quả ẩn nếu có tên này
     } else {
         selectedName = remainingNames[Math.floor(Math.random() * remainingNames.length)];
