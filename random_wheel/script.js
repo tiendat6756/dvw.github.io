@@ -6,7 +6,7 @@ canvas.height = 500;
 
 let names = ["Alice", "Bob", "Charlie", "David", "Eva"];
 let remainingNames = [...names];
-let hiddenResults = ["Thua tại khang","19/5","FGH","Phong Cách","HEW","Duck Team","CAP HIGH","Lại phải gánh Kito","Former XMH","Vua về nhì","3T","Đội Minh Moi","M C K","NDU BU"];
+let hiddenResults = ["Thua tại khang","19/5","FGH","Phong Cách","HEW","Duck Team","CAP HIGH","Lại phải gánh Kito","Former XMH","Vua về nhì","3T","Đội Minh Moi","MCK","NDU BU"];
 let angle = 0;
 let spinning = false;
 
@@ -70,7 +70,7 @@ function spinWheel() {
 
     let selectedName;
 
-    if (remainingNames.includes("M C K")) {
+    if (remainingNames.includes("MCK")) {
         selectedName = hiddenResults.shift(); // Lấy kết quả ẩn nếu có tên này
     } else {
         selectedName = remainingNames[Math.floor(Math.random() * remainingNames.length)];
