@@ -158,7 +158,9 @@ document.getElementById("spin").addEventListener("click", spinWheel);
 document.getElementById("interactiveImage").addEventListener("click", function() {
     this.style.display = "none"; // Ẩn hình ảnh khi nhấp vào
 });
-
+document.getElementById("leftImage").addEventListener("click", function() {
+    this.style.display = "none"; // Ẩn hình ảnh khi nhấp vào
+});
 // Đóng modal khi nhấp vào nút "Đóng"
 document.getElementById("closeModal").addEventListener("click", function() {
     document.getElementById("winnerModal").style.display = "none";
