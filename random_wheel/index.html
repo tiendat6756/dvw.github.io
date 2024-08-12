@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WHEEL OF NAMES</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="wheel-container">
+            <h1>WHEEL OF NAMES</h1>
+            <canvas id="wheel"></canvas>
+            <button id="spin">Quay</button>
+            <!-- Thêm hình ảnh bên dưới nút quay -->
+            <img id="interactiveImage" src="ad1.png" alt="Image" style="cursor: pointer;">
+        </div>
+        <div class="input-container">
+            <textarea id="nameInput" placeholder="Nhập tên..."></textarea>
+            <div class="button-group">
+                <button id="shuffleNames">Tráo đổi</button>
+                <button id="addNames">Cập nhật tên</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal để hiển thị tên người chiến thắng -->
+    <div id="winnerModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close-button">&times;</span>
+            <h2 id="winnerName">Tên được chọn</h2>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
