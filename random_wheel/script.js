@@ -6,7 +6,7 @@ canvas.height = 500;
 
 let names = ["Alice", "Bob", "Charlie", "David", "Eva"];
 let remainingNames = [...names];
-let hiddenResults = ["Thua tại khang","19/5","FGH","Phong Cách","HEW","Duck Team","CAP HIGH","Lại phải gánh Kito","Former XMH","Vua về nhì","3T","Khuyết Tật Bóng Rổ","MCK","NDU BU"];
+let hiddenResults = ["Vua về nhì","3T","Former XMH","Phong Cách","Duck Team","Lại phải gánh Kito","19/5","Thua tại khang","CAP HIGH","Khuyết Tật Bóng Rổ","MCK","NDU BU"];
 let angle = 0;
 let spinning = false;
 
