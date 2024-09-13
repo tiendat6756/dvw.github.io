@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: "Roboto", sans-serif;
+		}
+		body {
+			height: 100vh;
+			background: url("bg(dgnl).jpg");
+			background-position: center;
+			background-size: cover;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.hero-section {
+			display: flex;
+			flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
+			justify-content: center; /* Căn giữa nội dung theo chiều dọc */
+			align-items: center; /* Căn giữa nội dung theo chiều ngang */
+			text-align: center;
+			color: black;
+			padding: 20px;
+			background: none; /* Tạo nền trắng mờ cho dễ đọc */
+			border-radius: 10px; /* Tạo bo góc cho vùng nội dung */
+		}
+
+		.hero-section h1 {
+			font-size: 6rem;
+			color: orange;
+			margin-bottom: 20px; /* Khoảng cách giữa tiêu đề và danh sách */
+		}
+
+		.rectangle {
+			border: 2px dashed black; /* Viền nét đứt */
+			padding: 20px;
+			margin-bottom: 20px; /* Khoảng cách giữa danh sách và nút */
+			text-align: left; /* Căn trái văn bản trong danh sách */
+		}
+
+		.hero-section ul {
+			list-style-type: none; /* Loại bỏ dấu chấm mặc định */
+			padding-left: 0; /* Xóa khoảng cách bên trái */
+			margin: 0; /* Xóa khoảng cách mặc định */
+		}
+
+		.hero-section ul li {
+			font-size: 1rem;
+			margin-top: 10px;
+			position: relative;
+			padding-left: 25px; /* Giảm khoảng cách để văn bản gần với biểu tượng tick hơn */
+		}
+
+		.hero-section ul li::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 20px; /* Kích thước biểu tượng */
+			height: 20px; /* Kích thước biểu tượng */
+			background: url('tick.png') no-repeat center center;
+			background-size: contain; /* Đảm bảo hình ảnh không bị biến dạng */
+		}
+
+		.hero-section button {
+            width: 2opx;
+            padding: 12px ;
+            font-size: 18px;
+            color: #fff;
+            background-color: orange;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            animation: zoom-in-out 1s infinite;
+        }
+
+        @keyframes zoom-in-out {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+	</style>
+</head>
+<body>
+	<section class="hero-section">
+		<h1>ĐÁNH GIÁ NĂNG LỰC</h1>
+        <div class="rectangle">
+            <ul>
+                <li>Phòng luyện thi ảo như thật</li>
+                <li>Bộ đề đa dạng giúp rèn luyện tư duy</li>
+                <li>Lời giải chi tiết với những giáo viên chất lượng hàng đầu</li>
+            </ul>
+        </div>
+        <button>ĐĂNG KÝ NGAY</button>
+	</section>
+</body>
+</html>

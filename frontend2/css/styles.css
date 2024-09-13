@@ -1,0 +1,223 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Reddit+Sans+Condensed&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Reddit Sans Condensed", sans-serif;
+}
+
+body {
+	height: 100vh;
+	background-position: center;
+	background-size: cover;
+	transition: background-color 0.5s ease-in-out; /* Hiệu ứng nền mượt mà */
+}
+
+/* Head */
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 10px;
+	background: white;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+	z-index: 1000;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navbar {
+	display: flex;
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.navbar .logo {
+	font-size: 2.1rem;
+	font-weight: 600;
+}
+
+.navbar .logo span {
+	color: orangered;
+}
+
+.navbar .menu-links {
+	list-style: none;
+	display: flex;
+	gap: 40px;
+}
+
+.navbar a {
+	color: black;
+	text-decoration: none;
+	transition: 0.2s ease;
+}
+
+.navbar a:hover {
+	color: orangered;
+}
+
+/* Menu and close button */
+#mn-btn, #cl-btn {
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+#mn-btn {
+	display: none; /* Chỉ hiển thị trên thiết bị di động */
+}
+
+#cl-btn {
+	display: none;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	cursor: pointer;
+}
+
+/* Arrow styles */
+.arrow {
+	position: fixed;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 3rem;
+	color: black;
+	cursor: pointer;
+	user-select: none;
+	z-index: 1000;
+}
+
+#left-arrow {
+	left: 20px;
+}
+
+#right-arrow {
+	right: 20px;
+}
+
+/* Content container */
+#content-container {
+	padding: 250px;
+	margin-top: 70px; /* Khoảng trống để tránh header */
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	transition: transform 0.5s ease-in-out; /* Hiệu ứng mượt mà */
+}
+
+/* Hiệu ứng khi trượt vào từ bên trái */
+.slide-in-from-left {
+	animation: slideInLeft 0.5s forwards;
+}
+
+/* Hiệu ứng khi trượt ra từ bên phải */
+.slide-out-to-right {
+	animation: slideOutRight 0.5s forwards;
+}
+
+/* Hiệu ứng khi trượt vào từ bên phải */
+.slide-in-from-right {
+	animation: slideInRight 0.5s forwards;
+}
+
+/* Hiệu ứng khi trượt ra từ bên trái */
+.slide-out-to-left {
+	animation: slideOutLeft 0.5s forwards;
+}
+
+/* Keyframes để trượt vào từ bên trái */
+@keyframes slideInLeft {
+	0% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+/* Keyframes để trượt ra sang phải */
+@keyframes slideOutRight {
+	0% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+}
+
+/* Keyframes để trượt vào từ bên phải */
+@keyframes slideInRight {
+	0% {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+/* Keyframes để trượt ra sang trái */
+@keyframes slideOutLeft {
+	0% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+}
+
+.menu-links a.active {
+	color: #ff0000; /* Ví dụ: thay đổi màu sắc khi chọn */
+	font-weight: bold; /* Ví dụ: làm chữ đậm khi chọn */
+}
+
+@media screen and (max-width: 900px) {
+	/* Mobile view adjustments */
+	header.show-mobile-menu::before {
+		content: "";
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		backdrop-filter: blur(5px);
+	}
+	#content-container {
+		max-width: 100%; /* Giới hạn kích thước tối đa của #content-container */
+	  }
+
+	#cl-btn, #mn-btn {
+		display: block;
+	}
+
+	.navbar .menu-links {
+		position: fixed;
+		left: -260px;
+		top: 0;
+		flex-direction: column;
+		width: 260px;
+		height: 100vh;
+		background: #fff;
+		padding: 70px 40px 0;
+		transition: left 0.15s ease;
+	}
+
+	header.show-mobile-menu .navbar .menu-links {
+		left: 0;
+	}
+}
