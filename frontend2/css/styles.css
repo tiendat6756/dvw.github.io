@@ -105,7 +105,6 @@ header {
 
 /* Content container */
 #content-container {
-	padding: 250px;
 	margin-top: 70px; /* Khoảng trống để tránh header */
 	position: relative;
 	overflow: hidden;
