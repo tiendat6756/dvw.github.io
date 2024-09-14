@@ -1,4 +1,4 @@
-/* Google fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Reddit+Sans+Condensed&display=swap');
 
 * {
@@ -65,14 +65,14 @@ header {
 	color: orangered;
 }
 
-/* Menu and close button */
+
 #mn-btn, #cl-btn {
 	font-size: 1rem;
 	cursor: pointer;
 }
 
 #mn-btn {
-	display: none; /* Chỉ hiển thị trên thiết bị di động */
+	display: none; 
 }
 
 #cl-btn {
@@ -105,34 +105,33 @@ header {
 
 /* Content container */
 #content-container {
-	margin-top: 70px; /* Khoảng trống để tránh header */
+	margin-top: 70px; 
 	position: relative;
 	overflow: hidden;
 	width: 100%;
-	transition: transform 0.5s ease-in-out; /* Hiệu ứng mượt mà */
+	transition: transform 0.5s ease-in-out; 
 }
 
-/* Hiệu ứng khi trượt vào từ bên trái */
+
 .slide-in-from-left {
 	animation: slideInLeft 0.5s forwards;
 }
 
-/* Hiệu ứng khi trượt ra từ bên phải */
+
 .slide-out-to-right {
 	animation: slideOutRight 0.5s forwards;
 }
 
-/* Hiệu ứng khi trượt vào từ bên phải */
+
 .slide-in-from-right {
 	animation: slideInRight 0.5s forwards;
 }
 
-/* Hiệu ứng khi trượt ra từ bên trái */
+
 .slide-out-to-left {
 	animation: slideOutLeft 0.5s forwards;
 }
 
-/* Keyframes để trượt vào từ bên trái */
 @keyframes slideInLeft {
 	0% {
 		transform: translateX(-100%);
@@ -144,7 +143,7 @@ header {
 	}
 }
 
-/* Keyframes để trượt ra sang phải */
+
 @keyframes slideOutRight {
 	0% {
 		transform: translateX(0);
@@ -156,7 +155,7 @@ header {
 	}
 }
 
-/* Keyframes để trượt vào từ bên phải */
+
 @keyframes slideInRight {
 	0% {
 		transform: translateX(100%);
@@ -168,7 +167,6 @@ header {
 	}
 }
 
-/* Keyframes để trượt ra sang trái */
 @keyframes slideOutLeft {
 	0% {
 		transform: translateX(0);
@@ -181,12 +179,12 @@ header {
 }
 
 .menu-links a.active {
-	color: #ff0000; /* Ví dụ: thay đổi màu sắc khi chọn */
-	font-weight: bold; /* Ví dụ: làm chữ đậm khi chọn */
+	color: #ff0000; 
+	font-weight: bold; 
 }
 
 @media screen and (max-width: 900px) {
-	/* Mobile view adjustments */
+	
 	header.show-mobile-menu::before {
 		content: "";
 		position: fixed;
@@ -197,7 +195,7 @@ header {
 		backdrop-filter: blur(5px);
 	}
 	#content-container {
-		max-width: 100%; /* Giới hạn kích thước tối đa của #content-container */
+		max-width: 100%; 
 	  }
 
 	#cl-btn, #mn-btn {
